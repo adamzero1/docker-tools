@@ -42,7 +42,7 @@ COPY files/reimport-db /usr/local/bin/reimport-db
 RUN chmod a+x /usr/local/bin/reimport-db
 
 # Define mountable directories.
-#VOLUME [ "/var/www/html", "/home/$user/.ssh", "/mysql-imports" ]
+VOLUME [ "/var/www/html", "/home/$user/.ssh", "/mysql-imports" ]
 
 # Define working directory.
 WORKDIR /var/www/html
