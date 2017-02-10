@@ -23,6 +23,7 @@ RUN export TERM=xterm; apt-get update && apt-get install -y --force-yes \
 	nano \
 	postfix \
 	rsyslog \
+	wget \
 	--fix-missing
 	
 RUN apt-get clean
