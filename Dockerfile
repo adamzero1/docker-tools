@@ -1,7 +1,10 @@
 FROM ubuntu:xenial
 ENV DEBIAN_FRONTEND noninteractive
 
-ARG user=someuser
+ARG user
+ARG useruid
+# Add user stuff
+RUN useradd -U -m -u "${useruid}" -G sudo,www-data -d "/home/${user}" "${user}" 
 
 # Postfix Config
 RUN echo "postfix postfix/main_mailer_type string 'Internet Site'" | debconf-set-selections
