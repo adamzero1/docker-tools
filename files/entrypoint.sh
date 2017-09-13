@@ -4,7 +4,7 @@ service rsyslog start
 service postfix start
 
 # Add user stuff
-useradd -U -m -u ${DEFAULT_USER_UID} -G sudo,www-data -d /home/${DEFAULT_USER} ${DEFAULT_USER}
+#useradd -U -m -u ${DEFAULT_USER_UID} -G sudo,www-data -d /home/${DEFAULT_USER} ${DEFAULT_USER}
 
 # User specifics
 echo "" >> /home/${DEFAULT_USER}/.bashrc
